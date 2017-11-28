@@ -4,7 +4,7 @@ plot1<-function(dir="./household_power_consumption.txt"){
   library(dplyr)
   ##read colnames from line 1 of the text
   
-  colnames<-read.table("household_power_consumption.txt",header=F,
+  colnames<-read.table(dir,header=F,
                        nrows=1,sep=";",na.string="?",stringsAsFactors=F)
   ##read data from 1/2/2007 to 2/2/2007 of the text
   electricdata<-read.table("household_power_consumption.txt",
